@@ -47,3 +47,5 @@ Each input is treated in 3 steps:
     	t_simple_cmd	*next;
     
     }	t_simple_cmd;
+4 : each node is executed
+5 : We go again
