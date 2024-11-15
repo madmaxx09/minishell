@@ -31,6 +31,7 @@ Each input is treated in 3 steps:
     }	t_token;
     
 2 : Each token goes into the expander if needed
+
 3 : This list of token is then organised in an AST (abstract syntax tree) the result is a list of "commands" each node looks like this:
 
     typedef struct s_imple_cmd
