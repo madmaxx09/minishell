@@ -1,10 +1,10 @@
 NAME = minishell
 
-SRCS = token.c \
-	   ast.c \
-	   utils.c \
-       main.c \
-	   exec.c \
+SRCS = srcs/token.c \
+	   srcs/ast.c \
+	   srcs/utils.c \
+       srcs/main.c \
+	   srcs/exec.c \
 	   builtins/ft_cd.c \
 	   builtins/ft_echo.c \
 	   builtins/ft_exit.c \
@@ -15,32 +15,32 @@ SRCS = token.c \
 	   builtins/ft_export3.c \
 	   builtins/ft_unset.c \
 	   builtins/piece_of_cd.c \
-	   expander.c \
-	   custom_malloc.c \
-	   heredoc.c \
-	   error.c \
-	   ast_utils.c \
-	   path_utils.c \
-	   process_tokens.c \
-	   expander_utils.c \
-	   heredoc_utils.c \
-	   exec_utils.c \
-	   libft_functions.c \
-	   utils2.c \
-	   utils3.c \
-	   parsing_utils.c \
-	   redirection.c \
-	   copy_env.c \
-	   no_gc_dups.c \
-	   signals.c \
-	   libft.c \
-	   main_routine.c \
-	   print_token_nodes.c \
-	   token_utils.c \
-	   token_adder.c \
-	   token_handler.c \
-	   expand_heredoc_utils.c \
-	   dollar.c
+	   srcs/expander.c \
+	   srcs/custom_malloc.c \
+	   srcs/heredoc.c \
+	   srcs/error.c \
+	   srcs/ast_utils.c \
+	   srcs/path_utils.c \
+	   srcs/process_tokens.c \
+	   srcs/expander_utils.c \
+	   srcs/heredoc_utils.c \
+	   srcs/exec_utils.c \
+	   srcs/libft_functions.c \
+	   srcs/utils2.c \
+	   srcs/utils3.c \
+	   srcs/parsing_utils.c \
+	   srcs/redirection.c \
+	   srcs/copy_env.c \
+	   srcs/no_gc_dups.c \
+	   srcs/signals.c \
+	   srcs/libft.c \
+	   srcs/main_routine.c \
+	   srcs/print_token_nodes.c \
+	   srcs/token_utils.c \
+	   srcs/token_adder.c \
+	   srcs/token_handler.c \
+	   srcs/expand_heredoc_utils.c \
+	   srcs/dollar.c
 
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
