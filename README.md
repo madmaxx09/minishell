@@ -8,7 +8,8 @@ To use:
 - ./minishell
 - have fun trying to break it
 
-Each input is treated in 3 steps, the input is tokenized and added to this structure:
+Each input is treated in 3 steps:
+1 : the input is tokenized and added to this structure:
 
     typedef enum s_tokens
     {
@@ -28,3 +29,20 @@ Each input is treated in 3 steps, the input is tokenized and added to this struc
     	struct s_token	*prev;
     	int				quoted_heredoc;
     }	t_token;
+    
+2 : Each token goes into the expander if needed
+3 : This list of token is then organised in an AST (abstract syntax tree) the result is a list of "commands" each node looks like this:
+
+    typedef struct s_imple_cmd
+    {
+    	char			**args;
+    	char			*path_to_cmd;
+    	t_files_list	*input;
+    	t_files_list	*output;
+    	char			*heredoc_string;
+    	int				append_mode;
+    	int				heredoc;
+    	t_simple_cmd	*prev;
+    	t_simple_cmd	*next;
+    
+    }	t_simple_cmd;
